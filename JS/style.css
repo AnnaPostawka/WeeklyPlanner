@@ -1,0 +1,93 @@
+:root {
+  --hour-area-height: 5rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.days {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.day__title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  color: black;
+}
+
+.day__content {
+  display: flex;
+}
+
+.full_hours,
+.empty {
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0rem;
+  text-align: right;
+  padding-right: 0.5rem;
+  color: darkslategray;
+}
+
+.full_hours__number {
+  height: var(--hour-area-height);
+  font-size: 1.3rem;
+}
+
+.full_hours__number:last-child {
+  height: 1rem;
+}
+
+.day_area {
+  background-color: blanchedalmond;
+  width: 20rem;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.day_area__hour {
+  border-top: 2px dotted rgba(47, 79, 79, 0.2);
+}
+
+.day_area__hour:not(:last-child) {
+  margin: 0 0.5rem;
+  height: var(--hour-area-height);
+}
+
+.day_area__hour--timeblock {
+  background-color: rgba(210, 105, 30, 0.637);
+  border-radius: 0.5rem;
+  text-align: left;
+  padding-left: 1rem;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.timespan {
+  font-size: 1.2rem;
+}
